@@ -1,0 +1,5 @@
+Theme name:    PM
+Description:   This is custom PM theme.
+Author name:   Peter Machowski
+Author site:   http://machowski.co
+License:       http://licence.visualidiot.com
