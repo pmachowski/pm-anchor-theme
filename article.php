@@ -1,6 +1,7 @@
 <?php theme_include('header'); ?>
 
 		<section class="content wrap" id="article-<?php echo article_id(); ?>">
+			<img src="<?php echo article_custom_field('cover_img'); ?>" alt="" />
 			<h1><?php echo article_title(); ?></h1>
 
 			<article>

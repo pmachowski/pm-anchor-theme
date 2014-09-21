@@ -11,6 +11,7 @@
 			<?php while(posts()): ?>
 			<li>
 				<article class="wrap">
+					<img class="cover" src="<?php echo article_custom_field('cover_img'); ?>" alt="" />
 					<h1>
 						<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
 					</h1>

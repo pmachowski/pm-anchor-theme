@@ -177,6 +177,10 @@ h2 {
 		margin-top: 15px;
 	}
 
+	.items .cover {
+		padding-bottom: 20px;
+	}
+
 
 .pagination {
 	overflow: hidden;
