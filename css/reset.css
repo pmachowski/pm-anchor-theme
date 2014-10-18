@@ -14,7 +14,7 @@
 }
 
 body {
-	font: 17px/26px Skolar, Tisa, "Chaparral Pro", Merriweather, Georgia, serif;
+	font: 20px/30px Skolar, Tisa, "Chaparral Pro", Merriweather, Georgia, serif;
 }
 
 h1, h2, h3, h4, h5, #logo, #top, .slidey b, .slidey label, .counter, input, textarea, button, .pagination {
@@ -22,9 +22,15 @@ h1, h2, h3, h4, h5, #logo, #top, .slidey b, .slidey label, .counter, input, text
 	font-weight: 300;
 }
 
-pre, code, .mono {
-	font: 12px/19px "Anonymous Pro", Consolas, monospace;
+pre {
+	font: 14px/22px "Anonymous Pro", Consolas, monospace;
 	padding: 0 2px;
+}
+code {
+	font: 17px/27px "Anonymous Pro", Consolas, monospace;
+}
+.mono {
+	font-family: "Anonymous Pro", Consolas, monospace;
 }
 
 p {
