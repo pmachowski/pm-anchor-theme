@@ -9,7 +9,8 @@
 		<link rel="stylesheet" href="<?php echo theme_url('/css/reset.css'); ?>">
 		<link rel="stylesheet" href="<?php echo theme_url('/css/style.css'); ?>">
 		<link rel="stylesheet" href="<?php echo theme_url('/css/small.css'); ?>" media="(max-width: 400px)">
-		<link rel="stylesheet" href="<?php echo theme_url('/css/prism.css'); ?>">
+		<link rel="stylesheet" href="<?php echo theme_url('/css/color-brewer.css'); ?>">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo rss_url(); ?>">
 		<link rel="shortcut icon" href="<?php echo theme_url('img/favicon.png'); ?>">
@@ -21,8 +22,8 @@
 		<script>var base = '<?php echo theme_url(); ?>';</script>
 		<script src="<?php echo asset_url('/js/zepto.js'); ?>"></script>
 		<script src="<?php echo theme_url('/js/fss.min.js'); ?>"></script>
-		<script src="<?php echo theme_url('/js/main.js'); ?>"></script>
-		<script src="<?php echo theme_url('/js/prism.js'); ?>"></script>
+		<script src="<?php echo theme_url('/js/highlight.pack.js'); ?>"></script>
+		<script src="<?php echo theme_url('/js/main.src.js'); ?>"></script>
 
 	    <meta name="viewport" content="width=device-width">
 	    <meta name="generator" content="Anchor CMS">

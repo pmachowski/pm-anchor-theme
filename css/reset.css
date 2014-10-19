@@ -27,7 +27,7 @@ pre {
 	padding: 0 2px;
 }
 code {
-	font: 17px/27px "Anonymous Pro", Consolas, monospace;
+	font: 15px/24px "Anonymous Pro", Consolas, monospace;
 }
 .mono {
 	font-family: "Anonymous Pro", Consolas, monospace;
@@ -38,10 +38,10 @@ p {
 }
 
 pre {
-	padding: 15px 20px;
+	padding: 2px;
 	margin-bottom: 20px;
 
-	border-radius: 5px;
+	border-radius: 2px;
 	white-space: pre-wrap;
 }
 
@@ -76,8 +76,8 @@ a, .items h1 a:hover {
 	}
 
 pre, .hilite, mark {
-	background: #f9f6ea;
-	color: #8b7c65;
+	background: #5D6979;
+	color: #fefefe;
 	text-shadow: 0 1px 0 rgba(255,255,255,.2);
 }
 
