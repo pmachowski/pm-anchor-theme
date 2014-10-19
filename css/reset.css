@@ -68,7 +68,7 @@ a {
 body, .items > li:first-child {
 	color: #6e7886;
 }
-a, .items h1 a:hover {
+a {
 	color: #4075c3;
 }
 	a:hover {

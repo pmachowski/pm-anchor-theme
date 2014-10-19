@@ -13,6 +13,13 @@ h1 {
 		padding: 60px 0;
 	}
 
+.items h1 {
+	color: #4075c3;
+}
+	h1:hover {
+		color: #1e4d92;
+	}
+
 h2 {
 	padding: 40px 0 20px;
 	font-size: 30px;
