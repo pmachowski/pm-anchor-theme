@@ -88,8 +88,8 @@ $(function(){
 		width: 1.1,
 		height: 2.2,
 		depth: 10,
-		segments: 12,
-		slices: 6,
+		segments: Math.ceil(window.innerWidth / 100),
+		slices: Math.ceil(window.innerWidth / 200),
 		xRange: 0.8,
 		yRange: 0.1,
 		zRange: 1.0,
@@ -107,20 +107,20 @@ $(function(){
 		zOffset: 100,
 		ambient: '#3e508f',
 		diffuse: '#5cdbfe',
-		speed: 0.001,
-		gravity: 1200,
+		speed: 0.00001,
+		gravity: 120,
 		dampening: 0.65,
 		minLimit: 10,
 		maxLimit: null,
-		minDistance: 50,
-		maxDistance: 400,
+		minDistance: 30,
+		maxDistance: 60,
 		autopilot: true,
 		draw: true,
 		bounds: FSS.Vector3.create(),
 		step: FSS.Vector3.create(
-			Math.randomInRange(0.2, 1.0),
-			Math.randomInRange(0.2, 1.0),
-			Math.randomInRange(0.2, 1.0)
+			Math.randomInRange(1.2, 1.0),
+			Math.randomInRange(1.2, 1.0),
+			Math.randomInRange(1.2, 1.0)
 		)
 	};
 
@@ -236,16 +236,16 @@ $(function(){
 			light.force = FSS.Vector3.create();
 
 			// Ring SVG Circle
-			light.ring = document.createElementNS(FSS.SVGNS, 'circle');
-			light.ring.setAttributeNS(null, 'stroke', light.ambientHex);
-			light.ring.setAttributeNS(null, 'stroke-width', '0.5');
-			light.ring.setAttributeNS(null, 'fill', 'none');
-			light.ring.setAttributeNS(null, 'r', '10');
+			// light.ring = document.createElementNS(FSS.SVGNS, 'circle');
+			// light.ring.setAttributeNS(null, 'stroke', light.ambientHex);
+			// light.ring.setAttributeNS(null, 'stroke-width', '0.5');
+			// light.ring.setAttributeNS(null, 'fill', 'none');
+			// light.ring.setAttributeNS(null, 'r', '10');
 
 			// Core SVG Circle
-			light.core = document.createElementNS(FSS.SVGNS, 'circle');
-			light.core.setAttributeNS(null, 'fill', light.diffuseHex);
-			light.core.setAttributeNS(null, 'r', '4');
+			// light.core = document.createElementNS(FSS.SVGNS, 'circle');
+			// light.core.setAttributeNS(null, 'fill', light.diffuseHex);
+			// light.core.setAttributeNS(null, 'r', '4');
 		}
 	}
 
@@ -275,10 +275,10 @@ $(function(){
 		// Overwrite the Attractor position
 		if (LIGHT.autopilot) {
 			ox = Math.sin(LIGHT.step[0] * now * LIGHT.speed);
-			oy = Math.cos(LIGHT.step[1] * now * LIGHT.speed);
+			// oy = Math.cos(LIGHT.step[1] * now * LIGHT.speed);
 			FSS.Vector3.set(attractor,
 				LIGHT.bounds[0]*ox,
-				LIGHT.bounds[1]*oy,
+				LIGHT.bounds[1]+100,
 				LIGHT.zOffset);
 		}
 
@@ -335,26 +335,26 @@ $(function(){
 				switch(RENDER.renderer) {
 					case CANVAS:
 						renderer.context.lineWidth = 0.5;
-						renderer.context.beginPath();
-						renderer.context.arc(lx, ly, 10, 0, Math.PIM2);
-						renderer.context.strokeStyle = light.ambientHex;
-						renderer.context.stroke();
-						renderer.context.beginPath();
-						renderer.context.arc(lx, ly, 4, 0, Math.PIM2);
-						renderer.context.fillStyle = light.diffuseHex;
-						renderer.context.fill();
+						// renderer.context.beginPath();
+						// renderer.context.arc(lx, ly, 10, 0, Math.PIM2);
+						// renderer.context.strokeStyle = light.ambientHex;
+						// renderer.context.stroke();
+						// renderer.context.beginPath();
+						// renderer.context.arc(lx, ly, 4, 0, Math.PIM2);
+						// renderer.context.fillStyle = light.diffuseHex;
+						// renderer.context.fill();
 						break;
 					case SVG:
 						lx += renderer.halfWidth;
 						ly = renderer.halfHeight - ly;
-						light.core.setAttributeNS(null, 'fill', light.diffuseHex);
-						light.core.setAttributeNS(null, 'cx', lx);
-						light.core.setAttributeNS(null, 'cy', ly);
-						renderer.element.appendChild(light.core);
-						light.ring.setAttributeNS(null, 'stroke', light.ambientHex);
-						light.ring.setAttributeNS(null, 'cx', lx);
-						light.ring.setAttributeNS(null, 'cy', ly);
-						renderer.element.appendChild(light.ring);
+						// light.core.setAttributeNS(null, 'fill', light.diffuseHex);
+						// light.core.setAttributeNS(null, 'cx', lx);
+						// light.core.setAttributeNS(null, 'cy', ly);
+						// renderer.element.appendChild(light.core);
+						// light.ring.setAttributeNS(null, 'stroke', light.ambientHex);
+						// light.ring.setAttributeNS(null, 'cx', lx);
+						// light.ring.setAttributeNS(null, 'cy', ly);
+						// renderer.element.appendChild(light.ring);
 						break;
 				}
 			}
