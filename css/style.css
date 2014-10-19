@@ -373,3 +373,65 @@ ul.commentlist {
 	width: 100%;
 	background: #5090c8;
 }
+
+.fullblue {
+	background: hsl(215, 28%, 35%);
+	overflow: auto;
+}
+	.about {
+	}
+		.about section {
+			width: 50%;
+			float: left;
+		}
+		.about section:last-child {
+			padding-left: 10%;
+			float: right;
+		}
+		.about h1 {
+			color: rgba(176,200,236,.8);
+			-webkit-transition: color .25s;
+			-moz-transition: color .25s;
+			transition: color .25s;
+		}
+		.about:hover h1 {
+			color: #fff;
+		}
+		.about p {
+			color: #aab;
+			padding-bottom: 60px;
+		}
+
+	.tw-outside {
+		display: block;
+		margin: 0 0 0 60px;
+		position: relative;
+		height: 70px;
+		width: 70px;
+	}
+		.tw-link {
+			position: absolute;
+			display: block;
+			background: #0081b7;
+			width: 100%;
+			height: 100%;
+			padding-top: 10px;
+			text-align: center;
+
+			border-radius: 50%;
+			-moz-border-radius: 50%;
+			-webkit-border-radius: 50%;
+			transition: 0.5s ease all;
+			-moz-transition: 0.5s ease all;
+			-webkit-transition: 0.5s ease all;
+		}
+		.tw-outside:hover .tw-link {
+			transform: rotate(-360deg);
+			-moz-transform: rotate(-360deg);
+			-webkit-transform: rotate(-360deg);
+		}
+			.tw-link span {
+				color: #FFF;
+				font-size: 40px;
+				padding-top: 7px;
+			}
