@@ -56,7 +56,7 @@ function relative_time($date) {
 }
 
 function twitter_account() {
-	return site_meta('twitter', 'peter_machowski');
+	return site_meta('twitter', 'piotr_machowski');
 }
 
 function twitter_url() {
